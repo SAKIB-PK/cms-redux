@@ -1,4 +1,4 @@
-import { error_content, get_content, loading_content } from "../action/postAction"
+import { error_content, get_content, loading_content } from "../../action/postAction"
 
 const getContent = ()=>{
     return async(dispatch,getState)=>{
