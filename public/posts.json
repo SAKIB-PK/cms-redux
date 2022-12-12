@@ -1,0 +1,104 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "Sakib PK",
+      "image": "https://www.wikihow.com/Manage-People#/Image:Manage-People-Step-2-Version-2.jpg",
+      "title": "How to manage People in meetings",
+      "content": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
+      "tags": ["tutorial", "How to", "tips"],
+      "date_time": {
+        "date": {
+          "day": 12,
+          "month": 12,
+          "year": 2022
+        },
+        "time": {
+          "hour": 20,
+          "minute": 43,
+          "second": 12
+        }
+      }
+    },
+    {
+      "id": 2,
+      "author": "Sakib PK",
+      "image": "https://www.wikihow.com/Manage-People#/Image:Manage-People-Step-4-Version-2.jpg",
+      "title": "How to manage People in meetings",
+      "content": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
+      "tags": ["tutorial", "How to", "tips"],
+      "date_time": {
+        "date": {
+          "day": 12,
+          "month": 12,
+          "year": 2022
+        },
+        "time": {
+          "hour": 20,
+          "minute": 43,
+          "second": 12
+        }
+      }
+    },
+    {
+      "id": 3,
+      "author": "Sakib PK",
+      "image": "https://www.wikihow.com/Manage-People#/Image:Manage-People-Step-3-Version-2.jpg",
+      "title": "How to manage People in meetings",
+      "content": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
+      "tags": ["tutorial", "How to", "tips"],
+      "date_time": {
+        "date": {
+          "day": 12,
+          "month": 12,
+          "year": 2022
+        },
+        "time": {
+          "hour": 20,
+          "minute": 43,
+          "second": 12
+        }
+      }
+    },
+    {
+      "id": 4,
+      "author": "Sakib PK",
+      "image": "https://www.wikihow.com/Manage-People#/Image:Manage-People-Step-5-Version-2.jpg",
+      "title": "How to manage People in meetings",
+      "content": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
+      "tags": ["tutorial", "How to", "tips"],
+      "date_time": {
+        "date": {
+          "day": 12,
+          "month": 12,
+          "year": 2022
+        },
+        "time": {
+          "hour": 20,
+          "minute": 43,
+          "second": 12
+        }
+      }
+    },
+    {
+      "id": 5,
+      "author": "Sakib PK",
+      "image": "https://www.wikihow.com/Manage-People#/Image:Manage-People-Step-8-Version-2.jpg",
+      "title": "How to manage People in meetings",
+      "content": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
+      "tags": ["tutorial", "How to", "tips"],
+      "date_time": {
+        "date": {
+          "day": 12,
+          "month": 12,
+          "year": 2022
+        },
+        "time": {
+          "hour": 20,
+          "minute": 43,
+          "second": 12
+        }
+      }
+    }
+  ]
+}
