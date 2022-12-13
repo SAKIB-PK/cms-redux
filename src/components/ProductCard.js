@@ -17,7 +17,7 @@ const ProductCard = ({content}) => {
             <div className='mb-2 flex justify-start gap-5'>
                 {
                     tags.map(tag => 
-                        <button className={`border px-1 py-1 rounded-lg font-semibold`}>
+                        <button key={tag} className={`border px-1 py-1 rounded-lg font-semibold`}>
                             {tag}
                         </button>
                     )
