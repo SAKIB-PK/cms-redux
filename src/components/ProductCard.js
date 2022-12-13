@@ -1,7 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { sort_by_keyword } from '../redux/action/filterAction';
 
 const ProductCard = ({content}) => {
     const {image,title,desc,tags} = content
+    const dispatch = useDispatch()
     // const activeClass = "text-white bg-indigo-500 border-white";
   return (
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -17,7 +20,7 @@ const ProductCard = ({content}) => {
             <div className='mb-2 flex justify-start gap-5'>
                 {
                     tags.map(tag => 
-                        <button key={tag} className={`border px-1 py-1 rounded-lg font-semibold`}>
+                        <button onClick={e=>dispatch(sort_by_keyword(e.target.innerText))} key={tag} className={`border px-1 py-1 rounded-lg font-semibold`}>
                             {tag}
                         </button>
                     )
