@@ -7,18 +7,7 @@
       "title": "How to manage People in meetings",
       "desc": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
       "tags": ["tutorial", "How to", "tips"],
-      "date_time": {
-        "date": {
-          "day": 12,
-          "month": 12,
-          "year": 2022
-        },
-        "time": {
-          "hour": 20,
-          "minute": 43,
-          "second": 12
-        }
-      }
+      "date_time": 1670931332224
     },
     {
       "id": 2,
@@ -27,18 +16,7 @@
       "title": "How to manage People in meetings",
       "desc": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
       "tags": ["tutorial", "How to", "tips"],
-      "date_time": {
-        "date": {
-          "day": 12,
-          "month": 12,
-          "year": 2022
-        },
-        "time": {
-          "hour": 20,
-          "minute": 43,
-          "second": 12
-        }
-      }
+      "date_time": 1570931332224
     },
     {
       "id": 3,
@@ -47,18 +25,7 @@
       "title": "How to manage People in meetings",
       "desc": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
       "tags": ["tutorial", "How to", "tips"],
-      "date_time": {
-        "date": {
-          "day": 12,
-          "month": 12,
-          "year": 2022
-        },
-        "time": {
-          "hour": 20,
-          "minute": 43,
-          "second": 12
-        }
-      }
+      "date_time": 1670931322224
     },
     {
       "id": 4,
@@ -67,18 +34,7 @@
       "title": "How to manage People in meetings",
       "desc": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
       "tags": ["tutorial", "How to", "tips"],
-      "date_time": {
-        "date": {
-          "day": 12,
-          "month": 12,
-          "year": 2022
-        },
-        "time": {
-          "hour": 20,
-          "minute": 43,
-          "second": 12
-        }
-      }
+      "date_time": 1670930332224
     },
     {
       "id": 5,
@@ -87,18 +43,7 @@
       "title": "How to manage People in meetings",
       "desc": "Every company holds meetings periodically to discuss long-term goals, challenges and wins, projects, ideas, company-wide initiatives and other topics related to business operations.",
       "tags": ["tutorial", "How to", "tips"],
-      "date_time": {
-        "date": {
-          "day": 12,
-          "month": 12,
-          "year": 2022
-        },
-        "time": {
-          "hour": 20,
-          "minute": 43,
-          "second": 12
-        }
-      }
+      "date_time": 1670911332224
     }
   ]
 }

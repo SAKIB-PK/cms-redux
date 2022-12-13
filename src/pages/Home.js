@@ -5,29 +5,22 @@ import getContent from '../redux/thunk/content/getContent'
 
 const Home = () => {
   const dispatch = useDispatch()
-  let contents = useSelector(state => state.posts)
+  let contents = useSelector(state => state.content.posts)
 
   useEffect(()=>{
     dispatch(getContent())
   },[dispatch])
 
-  const activeClass = "text-white bg-indigo-500 border-white";
   return (
     <div className='max-w-7xl gap-14 mx-auto my-10'>
-      <div className='mb-10 flex justify-end gap-5'>
-        <span className={` px-3 py-2 font-semibold`}>Sort By: </span>
-        <button
-          className={`border px-3 py-2 rounded-full font-semibold ${activeClass }`}
-        >
-          AMD
-        </button>
-        <button
-          className={`border px-3 py-2 rounded-full font-semibold`}
-        >
-          Intel
-        </button>
+      <div className='mb-6 flex justify-end gap-5'>
+      <label for="countries" class=" mb-2 text-sm font-medium text-gray-900 dark:text-white">Sort By :</label>
+      <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500   p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option value="first" selected>First upload</option>
+        <option value="last">Last upload</option>
+      </select>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-14'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-14'>
           {
             contents.map(content =><ProductCard key={content.id} content = {content} />)
           }

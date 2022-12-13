@@ -1,12 +1,12 @@
 import React from 'react';
 
 const ProductCard = ({content}) => {
-    const {image,title,desc} = content
-    const activeClass = "text-white bg-indigo-500 border-white";
+    const {image,title,desc,tags} = content
+    // const activeClass = "text-white bg-indigo-500 border-white";
   return (
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         <a href="#s">
-            <img class="rounded-t-lg" src={image} alt="" />
+            <img class="rounded-t-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" src={image} alt="" />
         </a>
         <div class="p-5">
             <a href="#s">
@@ -15,21 +15,13 @@ const ProductCard = ({content}) => {
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{desc}</p>
             {/* tags show */}
             <div className='mb-2 flex justify-start gap-5'>
-                <button
-                className={`border px-1 py-1 rounded-lg font-semibold `}
-                >
-                In Stock
-                </button>
-                <button
-                className={`border px-1  py-1 rounded-lg font-semibold ${activeClass}`}
-                >
-                AMD
-                </button>
-                <button
-                className={`border px-1  py-1 rounded-lg font-semibold `}
-                >
-                Intel
-                </button>
+                {
+                    tags.map(tag => 
+                        <button className={`border px-1 py-1 rounded-lg font-semibold`}>
+                            {tag}
+                        </button>
+                    )
+                }
             </div>
             <a href="#s" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Read more
