@@ -1,9 +1,10 @@
-import { ERROR_CONTENT, GET_CONTENT, LOADING_CONTENT } from "../actionType/actionType";
+import { ADD_CONTENT, ADD_HISTORY, DELETE_CONTENT, ERROR_CONTENT, GET_CONTENT, LOADING_CONTENT } from "../actionType/actionType";
 
 const initialState = {
     loading:false,
     posts:[],
-    error:false
+    error:false,
+    history:[]
 }
 const contentReducer=(state = initialState,action)=>{
     switch (action.type) {
@@ -24,6 +25,28 @@ const contentReducer=(state = initialState,action)=>{
             return {
                 ...state,
                 error:true,
+            }
+        case ADD_HISTORY:
+            if(state.history.includes(action.payload)){
+                return {
+                    ...state,
+                    history:[...state.history]
+                }
+            }
+            return {
+                ...state,
+                history:[...state.history,action.payload]
+            }
+        case ADD_CONTENT:
+            return {
+                ...state,
+                posts:[...state.posts,action.payload]
+            }
+            
+        case DELETE_CONTENT:
+            return {
+                ...state,
+                posts:state.posts.filter(post => post.id !== action.payload)
             }
             
         default:

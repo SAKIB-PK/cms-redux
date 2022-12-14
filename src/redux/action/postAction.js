@@ -1,4 +1,4 @@
-import { ERROR_CONTENT, GET_CONTENT, LOADING_CONTENT } from "../actionType/actionType"
+import { ADD_CONTENT, DELETE_CONTENT, ERROR_CONTENT, GET_CONTENT, LOADING_CONTENT } from "../actionType/actionType"
 
 export const loading_content =()=>{
     return {
@@ -14,5 +14,17 @@ export const get_content =(data)=>{
 export const error_content =()=>{
     return {
         type:ERROR_CONTENT,
+    }
+}
+export const add_content =(data)=>{
+    return {
+        type:ADD_CONTENT,
+        payload:data
+    }
+}
+export const remove_content =(data)=>{
+    return {
+        type:DELETE_CONTENT,
+        payload:data
     }
 }
