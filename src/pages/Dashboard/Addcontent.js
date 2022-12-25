@@ -17,6 +17,7 @@ const Addcontent = () => {
         date_time:new Date().getTime()
       };
       dispatch(addContent(product))
+      
     };
   
     return (

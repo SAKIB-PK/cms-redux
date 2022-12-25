@@ -1,4 +1,4 @@
-import { ADD_CONTENT, ADD_HISTORY, DELETE_CONTENT, ERROR_CONTENT, GET_CONTENT, LOADING_CONTENT } from "../actionType/actionType";
+import { ADD_CONTENT, ADD_HISTORY, DELETE_CONTENT, ERROR_CONTENT, GET_CONTENT, LOADING_CONTENT, UPDATE_CONTENT } from "../actionType/actionType";
 
 const initialState = {
     loading:false,
@@ -47,6 +47,12 @@ const contentReducer=(state = initialState,action)=>{
             return {
                 ...state,
                 posts:state.posts.filter(post => post.id !== action.payload)
+            }
+            
+        case UPDATE_CONTENT:
+            return {
+                ...state,
+                posts:action.payload
             }
             
         default:
