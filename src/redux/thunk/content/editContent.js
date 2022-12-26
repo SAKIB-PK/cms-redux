@@ -2,10 +2,9 @@ import { edit_Content, error_content, loading_content } from "../../action/postA
 
 const editContent = (id,product)=>{
     return async(dispatch,getState)=>{
-        console.log(product)
         //when function call
         dispatch(loading_content())
-        const res = await fetch(`http://localhost:5000/posts/${id}`,{
+        const res = await fetch(`https://cms-redux-server.vercel.app/posts/${id}`,{
             method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

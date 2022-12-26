@@ -2,7 +2,7 @@ import { add_content } from "../../action/postAction"
 
 const addContent = (content)=>{
     return async(dispatch,getState)=>{
-        const res = await fetch("http://localhost:5000/posts",{
+        const res = await fetch("https://cms-redux-server.vercel.app/posts",{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(content),

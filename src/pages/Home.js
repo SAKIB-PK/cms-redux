@@ -14,18 +14,18 @@ const Home = () => {
   },[dispatch])
 
   if(contents.length){
-    data = contents.map(content =><ProductCard key={content.id} content = {content} />)
+    data = contents.map(content =><ProductCard key={content._id} content = {content} />)
   } 
   if(sort_first_upload){
-    data = contents.sort((a,b)=>a.date_time - b.date_time).map(content =><ProductCard key={content.id} content = {content} />)
+    data = contents.sort((a,b)=>a.date_time - b.date_time).map(content =><ProductCard key={content._id} content = {content} />)
   } 
   if(sort_last_upload){
-    data = contents.sort((a,b)=>b.date_time - a.date_time).map(content =><ProductCard key={content.id} content = {content} />)
+    data = contents.sort((a,b)=>b.date_time - a.date_time).map(content =><ProductCard key={content._id} content = {content} />)
   }
   // filter by keyword search
   if(keyword.length){
     // check every keyword in content tags array and filter
-    data = contents.filter(content => keyword.every(tag => content.tags.includes(tag))).map(content =><ProductCard key={content.id} content = {content} />)
+    data = contents.filter(content => keyword.every(tag => content.tags.includes(tag))).map(content =><ProductCard key={content._id} content = {content} />)
   }
 
   return (
