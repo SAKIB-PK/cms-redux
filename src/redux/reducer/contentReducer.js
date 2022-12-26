@@ -46,7 +46,7 @@ const contentReducer=(state = initialState,action)=>{
         case DELETE_CONTENT:
             return {
                 ...state,
-                posts:state.posts.filter(post => post.id !== action.payload)
+                posts:state.posts.filter(post => post._id !== action.payload)
             }
             
         case UPDATE_CONTENT:

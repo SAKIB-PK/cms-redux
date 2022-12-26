@@ -6,7 +6,7 @@ import getContent from '../redux/thunk/content/getContent'
 const ReadPost = () => {
     const {postID} = useParams()
     const contents = useSelector(state => state.content.posts)
-    const content = contents.filter(content => content.id === parseInt(postID))[0]
+    const content = contents.filter(content => content._id === parseInt(postID))[0]
     const dispatch = useDispatch()
     useEffect(()=> {
       dispatch(getContent())
@@ -18,7 +18,7 @@ const ReadPost = () => {
             <h2 class="text-4xl font-semibold text-gray-800 leading-tight">
               {content.title}
             </h2>
-            <Link to={`/dashboard/edit/${content.id}`} className=' bg-indigo-700 text-white font-semibold py-2  px-4 rounded'>Edit</Link>
+            <Link to={`/dashboard/edit/${content._id}`} className=' bg-indigo-700 text-white font-semibold py-2  px-4 rounded'>Edit</Link>
           </div>
           {
             content.tags.map(tag => <span key={tag}

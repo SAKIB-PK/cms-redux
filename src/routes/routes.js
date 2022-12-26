@@ -4,6 +4,7 @@ import Dashboard from '../layout/Dashboard'
 import Main from '../layout/Main'
 import Addcontent from '../pages/Dashboard/Addcontent'
 import EditContent from '../pages/Dashboard/EditContent'
+import EditPage from '../pages/Dashboard/EditPage'
 import RemoveContent from '../pages/Dashboard/RemoveContent'
 import History from '../pages/History'
 import Home from '../pages/Home'
@@ -36,6 +37,10 @@ const routes =createBrowserRouter([{
         {
             path:"/dashboard/remove",
             element:<RemoveContent/>
+        },
+        {
+            path:"/dashboard/edit/",
+            element:<EditPage/>
         },
         {
             path:"/dashboard/edit/:postID",

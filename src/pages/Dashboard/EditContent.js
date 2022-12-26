@@ -9,7 +9,7 @@ const EditContent = () => {
     const dispatch = useDispatch();
     const {postID} = useParams()
     const contents = useSelector(state => state.content.posts)
-    const content = contents.filter(content => content.id === parseInt(postID))[0]
+    const content = contents.filter(content => content._id === parseInt(postID))[0]
 
     useEffect(()=> {
       dispatch(getContent())

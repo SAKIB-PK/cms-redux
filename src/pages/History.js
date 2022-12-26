@@ -10,7 +10,7 @@ const History = () => {
         <h2 className=' text-2xl my-4 font-bold text-indigo-400 first-letter:text-indigo-500 '>History</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-14'>
             {
-            posts.filter(post => history.includes(post.id)).map(content =><ProductCard key={content.id} content = {content} />)
+            posts.filter(post => history.includes(post._id)).map(content =><ProductCard key={content._id} content = {content} />)
             }
         </div>
     </div>
