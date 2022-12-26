@@ -5,17 +5,16 @@ import { useParams } from 'react-router-dom';
 import editContent from '../../redux/thunk/content/editContent';
 import getContent from '../../redux/thunk/content/getContent';
 const EditContent = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit , reset} = useForm();
     const dispatch = useDispatch();
     const {postID} = useParams()
     const contents = useSelector(state => state.content.posts)
-    const content = contents.filter(content => content._id === parseInt(postID))[0]
-
+    const content = contents.filter(content => content._id === postID)[0]
     useEffect(()=> {
       dispatch(getContent())
     },[dispatch])
   
-    const submit = (data,e) => {
+    const submit = (data) => {
       const product = {
         author:"Sakib PK",
         title: data.title,
@@ -25,7 +24,8 @@ const EditContent = () => {
         date_time:new Date().getTime()
       };
       dispatch(editContent(postID,product))
-      
+      // form reset inputvalue
+      reset()
     };
   
     return (

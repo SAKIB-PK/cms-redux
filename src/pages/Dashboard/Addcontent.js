@@ -4,10 +4,10 @@ import { useDispatch } from 'react-redux';
 import addContent from '../../redux/thunk/content/addContent';
 
 const Addcontent = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit ,reset} = useForm();
     const dispatch = useDispatch();
   
-    const submit = (data,e) => {
+    const submit = (data) => {
       const product = {
         author:"Sakib PK",
         title: data.title,
@@ -17,7 +17,7 @@ const Addcontent = () => {
         date_time:new Date().getTime()
       };
       dispatch(addContent(product))
-      
+      reset()
     };
   
     return (

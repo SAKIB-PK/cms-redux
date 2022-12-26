@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { FiEdit } from "react-icons/fi"
 import { useDispatch, useSelector } from 'react-redux'
-import editContent from '../../redux/thunk/content/editContent'
+import { Link } from 'react-router-dom'
 import getContent from '../../redux/thunk/content/getContent'
 
 
@@ -55,9 +55,9 @@ const EditPage = () => {
                   </td>
                   <td className='p-2'>
                     <div className='flex justify-center'>
-                      <button onClick={()=> dispatch(editContent(_id))} >
+                      <Link to={`/dashboard/edit/${_id}`} >
                         <FiEdit/>
-                      </button>
+                      </Link>
                     </div>
                   </td>
                 </tr>
