@@ -4,7 +4,7 @@ const editContent = (id,product)=>{
     return async(dispatch,getState)=>{
         //when function call
         dispatch(loading_content())
-        const res = await fetch(`https://cms-redux-server.vercel.app/posts/${id}`,{
+        const res = await fetch(`https://cms-redux.up.railway.app/posts/${id}`,{
             method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
