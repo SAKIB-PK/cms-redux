@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import editContent from '../../redux/thunk/content/editContent';
 import getContent from '../../redux/thunk/content/getContent';
 const EditContent = () => {
@@ -10,6 +10,7 @@ const EditContent = () => {
     const {postID} = useParams()
     const contents = useSelector(state => state.content.posts)
     const content = contents.filter(content => content._id === postID)[0]
+    const navigate = useNavigate()
     useEffect(()=> {
       dispatch(getContent())
     },[dispatch])
@@ -26,7 +27,12 @@ const EditContent = () => {
       dispatch(editContent(postID,product))
       // form reset inputvalue
       reset()
+      // redirect to home page
+      navigate("/")
     };
+    if(!content){
+      return <p>Loading...</p>
+    }
   
     return (
       <div className='flex justify-center items-center h-full '>

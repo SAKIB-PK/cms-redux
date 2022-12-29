@@ -52,7 +52,7 @@ const contentReducer=(state = initialState,action)=>{
         case UPDATE_CONTENT:
             return {
                 ...state,
-                posts:action.payload
+                posts:[...state.posts,action.payload]
             }
             
         default:

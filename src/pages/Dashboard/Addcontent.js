@@ -1,11 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import addContent from '../../redux/thunk/content/addContent';
 
 const Addcontent = () => {
     const { register, handleSubmit ,reset} = useForm();
     const dispatch = useDispatch();
+    const navigate = useNavigate()
   
     const submit = (data) => {
       const product = {
@@ -18,6 +20,8 @@ const Addcontent = () => {
       };
       dispatch(addContent(product))
       reset()
+      // page redirect to home page
+      navigate("/")
     };
   
     return (

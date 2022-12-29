@@ -1,3 +1,4 @@
+import Swal from "sweetalert2"
 import { edit_Content, error_content, loading_content } from "../../action/postAction"
 
 const editContent = (id,product)=>{
@@ -11,9 +12,21 @@ const editContent = (id,product)=>{
         },
         body: JSON.stringify(product)
         })
-        const post =await res.json().catch(()=>dispatch(error_content()))
-        if(post.length){
-            dispatch(edit_Content(post))
+        const post =await res.json().catch(()=>{
+            dispatch(error_content())
+            Swal.fire({
+                title:"Error!",
+                text:"Something Wrong!",
+                icon:"error"
+            })
+        })
+        if(post.acknowledged){
+            dispatch(edit_Content(product))
+            Swal.fire({
+                title:"Success!",
+                text:"Post Update Successfully!",
+                icon:"success"
+            })
         }
     }
 }

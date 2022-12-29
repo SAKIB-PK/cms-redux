@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import Swal from 'sweetalert2'
 import getContent from '../../redux/thunk/content/getContent'
 import removeContent from '../../redux/thunk/content/removeContent'
 
@@ -9,6 +10,19 @@ const RemoveContent = () => {
     useEffect(()=>{
         dispatch(getContent())
     },[dispatch])
+    const hundleRemove =(id)=>{
+      Swal.fire({
+        title:"Are you sure!",
+        icon:"warning",
+        showCancelButton:true,
+
+      }).then(e =>{
+        if(e.isConfirmed){
+          dispatch(removeContent(id))
+        }
+      })
+      
+    }
   return (
     <div className='flex flex-col justify-center items-center h-full w-full '>
       <div className='w-full max-w-7xl mx-auto rounded-lg  bg-white shadow-lg border border-gray-200'>
@@ -53,7 +67,7 @@ const RemoveContent = () => {
                   </td>
                   <td className='p-2'>
                     <div className='flex justify-center'>
-                      <button onClick={()=> dispatch(removeContent(_id))} >
+                      <button onClick={()=>hundleRemove(_id)} >
                         <svg
                           className='w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1'
                           fill='none'

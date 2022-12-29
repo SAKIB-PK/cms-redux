@@ -1,3 +1,4 @@
+import Swal from "sweetalert2"
 import { add_content } from "../../action/postAction"
 
 const addContent = (content)=>{
@@ -8,7 +9,22 @@ const addContent = (content)=>{
             body: JSON.stringify(content),
         })
         const data = await res.json()
-        dispatch(add_content(content))
+        if(data.insertedId){
+            dispatch(add_content(content))
+            Swal.fire({
+                title:"Success",
+                text:"Your post Submitted!",
+                icon:"success"
+            })
+        }else{
+            Swal.fire({
+                title:"opps!",
+                text:"Post Submit failed!",
+                icon:"error"
+            })
+        }
+       
+        
     }
 }
 export default addContent
